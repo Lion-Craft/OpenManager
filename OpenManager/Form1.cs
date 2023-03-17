@@ -17,7 +17,6 @@ namespace OpenManager
 		public Form1()
 		{
 			InitializeComponent();
-			//Form2.ActiveForm.Close();
 			string original = "Here is some data to encrypt!";
 
 			// Create a new instance of the Aes
@@ -135,17 +134,21 @@ namespace OpenManager
 
 		private void menuItem3_Click(object sender, EventArgs e)
 		{
+			// "Save" button in Menu Bar under "File".
 
+			//	TODO: Implement Save, Load and in general the main part of the program
 		}
 
 		private void menuItem4_Click(object sender, EventArgs e)
 		{
+			//	"Quit" button in Menu Bar under "File".
 			MessageBox.Show("");
 			Application.Exit();
 		}
 
 		private void menuItem5_Click(object sender, EventArgs e)
 		{
+			//	"About" button in Menu Bar under "File".
 			var aboutform = new Form3();
 			aboutform.Show();
 		}

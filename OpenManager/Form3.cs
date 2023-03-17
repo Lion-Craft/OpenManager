@@ -14,6 +14,7 @@ namespace OpenManager
 	{
 		public Form3()
 		{
+			//	Sets text with version number & Copyright when About page is opened.
 			InitializeComponent();
 			label1.Text = "OpenManager v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version + "\n\nCopyright \u00A9 2023 Leon Frommholz";
 		}

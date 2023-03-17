@@ -9,17 +9,14 @@ namespace OpenManager
 {
 	static class Program
 	{
-		/// <summary>
-		/// Der Haupteinstiegspunkt für die Anwendung.
-		/// </summary>
 		[STAThread]
 		static void Main()
 		{
 			Properties.Settings.Default.LoggedIn = false;
-			Properties.Settings.Default.Save();
-			Application.EnableVisualStyles();
-			Application.SetCompatibleTextRenderingDefault(false);
-			Application.Run(new Form2());
+			Properties.Settings.Default.Save();				//	I have no idea why these two lines for settings exist, but they do.
+			Application.EnableVisualStyles();						//	Probably doesn't break compatibility
+			Application.SetCompatibleTextRenderingDefault(false);	//	
+			Application.Run(new Form2());	//	Finally runs the program.
 		}
 	}
 }
