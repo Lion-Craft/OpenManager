@@ -37,8 +37,6 @@ namespace OpenManager
 			this.menuItem3 = new System.Windows.Forms.MenuItem();
 			this.menuItem5 = new System.Windows.Forms.MenuItem();
 			this.menuItem4 = new System.Windows.Forms.MenuItem();
-			this.menuItem6 = new System.Windows.Forms.MenuItem();
-			this.menuItem7 = new System.Windows.Forms.MenuItem();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
 			this.Account = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,8 +47,7 @@ namespace OpenManager
 			// mainMenu1
 			// 
 			this.mainMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItem1,
-            this.menuItem6});
+            this.menuItem1});
 			// 
 			// menuItem1
 			// 
@@ -85,27 +82,20 @@ namespace OpenManager
 			this.menuItem4.Text = "Quit";
 			this.menuItem4.Click += new System.EventHandler(this.menuItem4_Click);
 			// 
-			// menuItem6
-			// 
-			this.menuItem6.Index = 1;
-			this.menuItem6.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItem7});
-			this.menuItem6.Text = "Entry";
-			// 
-			// menuItem7
-			// 
-			this.menuItem7.Index = 0;
-			this.menuItem7.Text = "Create";
-			// 
 			// dataGridView1
 			// 
 			this.dataGridView1.AllowUserToOrderColumns = true;
+			this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+			this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+			this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+			this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Account,
             this.Password,
             this.Show});
 			this.dataGridView1.Location = new System.Drawing.Point(12, 12);
+			this.dataGridView1.MultiSelect = false;
 			this.dataGridView1.Name = "dataGridView1";
 			this.dataGridView1.Size = new System.Drawing.Size(776, 426);
 			this.dataGridView1.TabIndex = 2;
@@ -115,14 +105,14 @@ namespace OpenManager
 			this.Account.Frozen = true;
 			this.Account.HeaderText = "Account";
 			this.Account.Name = "Account";
-			this.Account.ReadOnly = true;
+			this.Account.Width = 74;
 			// 
 			// Password
 			// 
 			this.Password.Frozen = true;
 			this.Password.HeaderText = "Password";
 			this.Password.Name = "Password";
-			this.Password.ReadOnly = true;
+			this.Password.Width = 81;
 			// 
 			// Show
 			// 
@@ -132,6 +122,7 @@ namespace OpenManager
 			this.Show.ReadOnly = true;
 			this.Show.Text = "Show";
 			this.Show.UseColumnTextForButtonValue = true;
+			this.Show.Width = 42;
 			// 
 			// Form1
 			// 
@@ -157,8 +148,6 @@ namespace OpenManager
 		private System.Windows.Forms.MenuItem menuItem3;
 		private System.Windows.Forms.MenuItem menuItem4;
 		private System.Windows.Forms.MenuItem menuItem5;
-		private System.Windows.Forms.MenuItem menuItem6;
-		private System.Windows.Forms.MenuItem menuItem7;
 		private System.Windows.Forms.DataGridView dataGridView1;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Account;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Password;

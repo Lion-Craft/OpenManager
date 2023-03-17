@@ -142,7 +142,7 @@ namespace OpenManager
 		private void menuItem4_Click(object sender, EventArgs e)
 		{
 			//	"Quit" button in Menu Bar under "File".
-			MessageBox.Show("");
+			MessageBox.Show("");	//	Why is this MessageBox still here?
 			Application.Exit();
 		}
 
