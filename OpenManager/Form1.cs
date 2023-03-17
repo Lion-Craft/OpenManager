@@ -142,7 +142,7 @@ namespace OpenManager
 		private void menuItem4_Click(object sender, EventArgs e)
 		{
 			//	"Quit" button in Menu Bar under "File".
-			MessageBox.Show("");	//	Why is this MessageBox still here?
+			MessageBox.Show("Exiting...");	//	Why is this MessageBox still here?
 			Application.Exit();
 		}
 
@@ -151,6 +151,12 @@ namespace OpenManager
 			//	"About" button in Menu Bar under "File".
 			var aboutform = new Form3();
 			aboutform.Show();
+		}
+		//	Supposed to show PWD in row the button is in	
+		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+			MessageBox.Show("pressed something" + e.RowIndex);
+			
 		}
 	}
 }

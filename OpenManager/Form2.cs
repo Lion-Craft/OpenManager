@@ -36,6 +36,7 @@ namespace OpenManager
 			else
 			{
 				nuser = true;
+				//Form2.ActiveForm.Height += 10;	This would fix the text issue but it causes a System.NullReferenceException.	What the fuck.
 				label1.Text = "Welcome to OpenManager!\n\nNo account found! \nIf you already have a account make sure\nuinf.dat is located in " + appdata + @"\OpenManager\" + "\n\nIf you do not have a account yet please create one below:";
 				button1.Text = "Create Account";
 				label2.Text = "Username:\n\nPassword:\n\nConfirm:";
@@ -83,6 +84,10 @@ namespace OpenManager
 								//	causes the program to remain open when closing it with
 								//	the Windows close button in Form1 instead of using
 								//	File -> Quit...		Too bad!
+								//
+								//	P.S. Yes, this does cause the memory to fill up if the user opens
+								//	and closes the program incorrectly a lot.
+								//	And no, I don't know how to fix it yet.
 			}
 		}
 		//	Everything below crates Hashes. I don't quite know how it works but again, I couldn't care less.
