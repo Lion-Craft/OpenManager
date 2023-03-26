@@ -67,7 +67,7 @@ namespace OpenManager
             this.Name = "Form3";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
             this.Text = "OpenManager - About";
-            this.Load += new System.EventHandler(this.Form3_Load);
+            
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
