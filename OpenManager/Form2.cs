@@ -80,14 +80,8 @@ namespace OpenManager
 			{
 				var mainForm = new Form1();
 				mainForm.Show();
-				this.Hide();    //	This is completely and utterly fucking retarded and 
-								//	causes the program to remain open when closing it with
-								//	the Windows close button in Form1 instead of using
-								//	File -> Quit...		Too bad!
-								//
-								//	P.S. Yes, this does cause the memory to fill up if the user opens
-								//	and closes the program incorrectly a lot.
-								//	And no, I don't know how to fix it yet.
+				this.Hide();    //	This is completely and utterly fucking retarded.
+								//	Update: Fixed the original issue now but is still a awful way to do this.
 			}
 		}
 		//	Everything below crates Hashes. I don't quite know how it works but again, I couldn't care less.

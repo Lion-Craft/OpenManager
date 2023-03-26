@@ -15,7 +15,6 @@ namespace OpenManager
 	public partial class Form1 : Form
 	{
 		public Form1()
-			// fun fact: i'm getting paid in kisses and cuddles :#
 		{
 			InitializeComponent();
 			string original = "Here is some data to encrypt!";
@@ -39,10 +38,8 @@ namespace OpenManager
 		}
 		public void Form_FormClosing(object sender, FormClosedEventArgs e)
 		{
-			if (true)
-			{
-				Application.Exit();
-			}
+			//	Exit Program when Form1 gets Closed via the "X" button.
+			Application.Exit();
 		}
 		public static byte[] GetHash(string inputString)
 		{
