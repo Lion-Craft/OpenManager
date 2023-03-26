@@ -147,7 +147,6 @@ namespace OpenManager
 		private void menuItem4_Click(object sender, EventArgs e)
 		{
 			//	"Quit" button in Menu Bar under "File".
-			MessageBox.Show("Exiting...");	//	Why is this MessageBox still here?
 			Application.Exit();
 		}
 
@@ -171,7 +170,7 @@ namespace OpenManager
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
-            DialogResult result = MessageBox.Show("Do you really want to exit?", "Dialog Title", MessageBoxButtons.YesNo);
+            DialogResult result = MessageBox.Show("Do you really want to exit?", "OpenManager - Exit", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
             {
                 Environment.Exit(0);
