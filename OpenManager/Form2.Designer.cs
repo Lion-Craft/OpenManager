@@ -65,7 +65,7 @@ namespace OpenManager
 			// button2
 			// 
 			this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.button2.Location = new System.Drawing.Point(304, 126);
+			this.button2.Location = new System.Drawing.Point(302, 172);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(50, 22);
 			this.button2.TabIndex = 2;
@@ -75,7 +75,7 @@ namespace OpenManager
 			// 
 			// textBox1
 			// 
-			this.textBox1.Location = new System.Drawing.Point(107, 101);
+			this.textBox1.Location = new System.Drawing.Point(105, 147);
 			this.textBox1.Name = "textBox1";
 			this.textBox1.Size = new System.Drawing.Size(200, 20);
 			this.textBox1.TabIndex = 3;
@@ -84,7 +84,7 @@ namespace OpenManager
 			// 
 			this.label2.AutoSize = true;
 			this.label2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			this.label2.Location = new System.Drawing.Point(40, 104);
+			this.label2.Location = new System.Drawing.Point(38, 150);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(61, 65);
 			this.label2.TabIndex = 4;
@@ -92,7 +92,7 @@ namespace OpenManager
 			// 
 			// textBox2
 			// 
-			this.textBox2.Location = new System.Drawing.Point(107, 127);
+			this.textBox2.Location = new System.Drawing.Point(105, 173);
 			this.textBox2.Name = "textBox2";
 			this.textBox2.Size = new System.Drawing.Size(200, 20);
 			this.textBox2.TabIndex = 5;
@@ -100,7 +100,7 @@ namespace OpenManager
 			// 
 			// textBox3
 			// 
-			this.textBox3.Location = new System.Drawing.Point(107, 153);
+			this.textBox3.Location = new System.Drawing.Point(105, 199);
 			this.textBox3.Name = "textBox3";
 			this.textBox3.Size = new System.Drawing.Size(200, 20);
 			this.textBox3.TabIndex = 6;
@@ -111,7 +111,7 @@ namespace OpenManager
 			this.label3.AutoSize = true;
 			this.label3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label3.ForeColor = System.Drawing.Color.Red;
-			this.label3.Location = new System.Drawing.Point(135, 176);
+			this.label3.Location = new System.Drawing.Point(133, 222);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(136, 13);
 			this.label3.TabIndex = 7;
