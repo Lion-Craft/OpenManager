@@ -36,22 +36,12 @@ namespace OpenManager
 				Debug.WriteLine("Round Trip: {0}", roundtrip);
 			}
 		}
-		public void Form_FormClosing(object sender, FormClosingEventArgs e)
+		public void Form_FormClosing(object sender, FormClosedEventArgs e)
 		{
-			if (this.DialogResult == DialogResult.Cancel)
-			{
-				MessageBox.Show("Close?");
-				Application.Exit();
-			}
-			else
-			{
-				
-			}
-			if (e.CloseReason == CloseReason.WindowsShutDown)
+			if (true)
 			{
 				Application.Exit();
 			}
-			MessageBox.Show(e.CloseReason.ToString());
 		}
 		public static byte[] GetHash(string inputString)
 		{

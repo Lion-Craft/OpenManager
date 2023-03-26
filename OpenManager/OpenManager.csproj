@@ -106,6 +106,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="OpenManagerLogo.ico" />
+    <None Include="Resources\Saveico.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
