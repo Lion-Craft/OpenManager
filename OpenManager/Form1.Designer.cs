@@ -62,23 +62,27 @@ namespace OpenManager
 			// menuItem2
 			// 
 			this.menuItem2.Index = 0;
+			this.menuItem2.Shortcut = System.Windows.Forms.Shortcut.CtrlO;
 			this.menuItem2.Text = "Open";
 			// 
 			// menuItem3
 			// 
 			this.menuItem3.Index = 1;
+			this.menuItem3.Shortcut = System.Windows.Forms.Shortcut.CtrlS;
 			this.menuItem3.Text = "Save";
 			this.menuItem3.Click += new System.EventHandler(this.menuItem3_Click);
 			// 
 			// menuItem5
 			// 
 			this.menuItem5.Index = 2;
+			this.menuItem5.Shortcut = System.Windows.Forms.Shortcut.F1;
 			this.menuItem5.Text = "About";
 			this.menuItem5.Click += new System.EventHandler(this.menuItem5_Click);
 			// 
 			// menuItem4
 			// 
 			this.menuItem4.Index = 3;
+			this.menuItem4.Shortcut = System.Windows.Forms.Shortcut.AltF4;
 			this.menuItem4.Text = "Quit";
 			this.menuItem4.Click += new System.EventHandler(this.menuItem4_Click);
 			// 

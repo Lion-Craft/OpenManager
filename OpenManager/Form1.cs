@@ -36,6 +36,23 @@ namespace OpenManager
 				Debug.WriteLine("Round Trip: {0}", roundtrip);
 			}
 		}
+		public void Form_FormClosing(object sender, FormClosingEventArgs e)
+		{
+			if (this.DialogResult == DialogResult.Cancel)
+			{
+				MessageBox.Show("Close?");
+				Application.Exit();
+			}
+			else
+			{
+				
+			}
+			if (e.CloseReason == CloseReason.WindowsShutDown)
+			{
+				Application.Exit();
+			}
+			MessageBox.Show(e.CloseReason.ToString());
+		}
 		public static byte[] GetHash(string inputString)
 		{
 			using (HashAlgorithm algorithm = SHA256.Create())
