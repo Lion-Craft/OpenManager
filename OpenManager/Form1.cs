@@ -15,6 +15,7 @@ namespace OpenManager
 	public partial class Form1 : Form
 	{
 		public Form1()
+			// fun fact: i'm getting paid in kisses and cuddles :#
 		{
 			InitializeComponent();
 			string original = "Here is some data to encrypt!";
