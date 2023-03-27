@@ -177,17 +177,17 @@ namespace OpenManager
 		}
 
 		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            DialogResult result = MessageBox.Show("Do you really want to exit?", "OpenManager - Exit", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
-            {
-                Environment.Exit(0);
-            }
-            else
-            {
-                e.Cancel = true;
-            }
-        }
-    }
-    
+		{
+			DialogResult result = MessageBox.Show("Do you really want to exit?", "OpenManager - Exit", MessageBoxButtons.YesNo);
+			if (result == DialogResult.Yes)
+			{
+				Environment.Exit(0);
+			}
+			else
+			{
+				e.Cancel = true;
+			}
+		}
+	}
+	
 }

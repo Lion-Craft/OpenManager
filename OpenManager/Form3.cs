@@ -18,7 +18,5 @@ namespace OpenManager
 			InitializeComponent();
 			label1.Text = "OpenManager v" + System.Reflection.Assembly.GetExecutingAssembly().GetName().Version + "\n\nCopyright \u00A9 2023 Lion Craft and AcisSys";
 		}
-
-       
-    }
+	}
 }
