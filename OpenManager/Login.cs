@@ -12,14 +12,14 @@ using System.Security.Cryptography;
 namespace OpenManager
 {
 	
-	public partial class Form2 : Form
+	public partial class Login : Form
 	{
 		//	Makes Public Variables for appdata path and nuser.
 		public string appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
 		public bool nuser = false;
 
 		//	Does stuffs when program is started.
-		public Form2()
+		public Login()
 		{
 			InitializeComponent();
 			
@@ -78,7 +78,7 @@ namespace OpenManager
 			//	P.S. This seems incredebly insecure and stupid.
 			if (nuser == false && File.ReadAllText(appdata + @"\OpenManager\uinf.dat") == GetHashString(textBox2.Text) + "\n" + GetHashString(textBox1.Text))
 			{
-				var mainForm = new Form1();
+				var mainForm = new MainWindow();
 				mainForm.Show();
 				this.Hide();    //	This is completely and utterly fucking retarded.
 								//	Update: Fixed the original issue now but is still a awful way to do this.

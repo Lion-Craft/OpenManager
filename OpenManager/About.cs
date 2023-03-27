@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace OpenManager
 {
-	public partial class Form3 : Form
+	public partial class About : Form
 	{
-		public Form3()
+		public About()
 		{
 			//	Sets text with version number & Copyright when About page is opened.
 			InitializeComponent();

@@ -1,7 +1,7 @@
 ﻿
 namespace OpenManager
 {
-	partial class Form1
+	partial class MainWindow
 	{
 		/// <summary>
 		/// Erforderliche Designervariable.
@@ -31,7 +31,7 @@ namespace OpenManager
 		{
 			this.components = new System.ComponentModel.Container();
 			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainWindow));
 			this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
 			this.menuItem1 = new System.Windows.Forms.MenuItem();
 			this.menuItem2 = new System.Windows.Forms.MenuItem();
@@ -39,20 +39,20 @@ namespace OpenManager
 			this.menuItem5 = new System.Windows.Forms.MenuItem();
 			this.menuItem4 = new System.Windows.Forms.MenuItem();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-			this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-			this.dataSet1 = new System.Data.DataSet();
-			this.dataTable1 = new System.Data.DataTable();
-			this.dataTable2 = new System.Data.DataTable();
-			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
 			this.Account = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.Show = new System.Windows.Forms.DataGridViewButtonColumn();
+			this.dataSet1 = new System.Data.DataSet();
+			this.dataTable1 = new System.Data.DataTable();
+			this.dataTable2 = new System.Data.DataTable();
+			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+			this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-			this.toolStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataTable1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataTable2)).BeginInit();
+			this.toolStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// mainMenu1
@@ -127,48 +127,6 @@ namespace OpenManager
 			this.dataGridView1.TabIndex = 2;
 			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
 			// 
-			// toolStrip1
-			// 
-			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1});
-			this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
-			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
-			this.toolStrip1.Name = "toolStrip1";
-			this.toolStrip1.Size = new System.Drawing.Size(800, 25);
-			this.toolStrip1.TabIndex = 3;
-			this.toolStrip1.Text = "toolStrip1";
-			this.toolStrip1.Visible = false;
-			// 
-			// toolStripButton1
-			// 
-			this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-			this.toolStripButton1.Image = global::OpenManager.Properties.Resources.Saveico1;
-			this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-			this.toolStripButton1.Name = "toolStripButton1";
-			this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
-			this.toolStripButton1.Text = "Save";
-			// 
-			// dataSet1
-			// 
-			this.dataSet1.CaseSensitive = true;
-			this.dataSet1.DataSetName = "MainTable";
-			this.dataSet1.Tables.AddRange(new System.Data.DataTable[] {
-            this.dataTable1,
-            this.dataTable2});
-			// 
-			// dataTable1
-			// 
-			this.dataTable1.TableName = "account";
-			// 
-			// dataTable2
-			// 
-			this.dataTable2.TableName = "password";
-			// 
-			// saveFileDialog1
-			// 
-			this.saveFileDialog1.AddExtension = false;
-			this.saveFileDialog1.RestoreDirectory = true;
-			// 
 			// Account
 			// 
 			this.Account.DataPropertyName = "account";
@@ -194,7 +152,49 @@ namespace OpenManager
 			this.Show.UseColumnTextForButtonValue = true;
 			this.Show.Width = 47;
 			// 
-			// Form1
+			// dataSet1
+			// 
+			this.dataSet1.CaseSensitive = true;
+			this.dataSet1.DataSetName = "MainTable";
+			this.dataSet1.Tables.AddRange(new System.Data.DataTable[] {
+            this.dataTable1,
+            this.dataTable2});
+			// 
+			// dataTable1
+			// 
+			this.dataTable1.TableName = "account";
+			// 
+			// dataTable2
+			// 
+			this.dataTable2.TableName = "password";
+			// 
+			// toolStrip1
+			// 
+			this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1});
+			this.toolStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.HorizontalStackWithOverflow;
+			this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+			this.toolStrip1.Name = "toolStrip1";
+			this.toolStrip1.Size = new System.Drawing.Size(800, 25);
+			this.toolStrip1.TabIndex = 3;
+			this.toolStrip1.Text = "toolStrip1";
+			this.toolStrip1.Visible = false;
+			// 
+			// toolStripButton1
+			// 
+			this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+			this.toolStripButton1.Image = global::OpenManager.Properties.Resources.Saveico1;
+			this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+			this.toolStripButton1.Name = "toolStripButton1";
+			this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
+			this.toolStripButton1.Text = "Save";
+			// 
+			// saveFileDialog1
+			// 
+			this.saveFileDialog1.AddExtension = false;
+			this.saveFileDialog1.RestoreDirectory = true;
+			// 
+			// MainWindow
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -204,15 +204,15 @@ namespace OpenManager
 			this.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
 			this.Menu = this.mainMenu1;
-			this.Name = "Form1";
+			this.Name = "MainWindow";
 			this.Text = "OpenManager";
 			this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-			this.toolStrip1.ResumeLayout(false);
-			this.toolStrip1.PerformLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataTable1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataTable2)).EndInit();
+			this.toolStrip1.ResumeLayout(false);
+			this.toolStrip1.PerformLayout();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
