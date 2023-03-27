@@ -139,9 +139,14 @@ namespace OpenManager
 
 		private void menuItem3_Click(object sender, EventArgs e)
 		{
-			// "Save" button in Menu Bar under "File".
+			//	"Save" button in Menu Bar under "File".
 
-			//	TODO: Implement Save, Load and in general the main part of the program
+			//	Opens a saveFileDialog
+			saveFileDialog1.ShowDialog();
+			Debug.WriteLine(saveFileDialog1.FileName);  //	For debugging (to check the filepath)
+
+			//	Call SaveContents to save contents of DataGridViewer (oh who wouldve thought)
+			SaveContents(saveFileDialog1.FileName);
 		}
 
 		private void menuItem4_Click(object sender, EventArgs e)
@@ -163,17 +168,12 @@ namespace OpenManager
 			
 		}
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-		public void SaveContents()
+		public void SaveContents(string savePath)
 		{
-			
+			//	TODO: Implement Save and Load
 		}
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Do you really want to exit?", "OpenManager - Exit", MessageBoxButtons.YesNo);
             if (result == DialogResult.Yes)
