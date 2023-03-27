@@ -69,6 +69,8 @@ namespace OpenManager
 				//	Create Aes stuff, Encrypt Password and Username and Write those in a file.
 				using (Aes aes = Aes.Create())
 				{
+					string pass = null;
+					string uName = null;
 					//	Set Constant IV & Key for Encryption... Yes, this is stupid, especially since this is Open Source, but it's better than nothing.
 					byte[] IV = { 0x17, 0x1b, 0x16, 0x09, 0x42, 0x15, 0x69, 0x35, 0x69, 0x42, 0x20, 0x16, 0x90, 0x78, 0x24, 0x19 };
 					aes.IV = IV;
@@ -79,8 +81,19 @@ namespace OpenManager
 					byte[] encryptedPassword = EncryptStringToBytes_Aes(GetHashString(textBox3.Text), aes.Key, aes.IV);
 					byte[] encryptedUsername = EncryptStringToBytes_Aes(GetHashString(textBox1.Text), aes.Key, aes.IV);
 
+					foreach (byte cryptPass in encryptedPassword)
+					{
+						pass += cryptPass.ToString();
+						Debug.WriteLine(pass);
+					}
+					foreach (byte cryptUser in encryptedUsername)
+					{
+						uName += cryptUser.ToString();
+						Debug.WriteLine(uName);
+					}
+
 					//	Write Password and Username into uinf.dat.
-					File.WriteAllText(appdata + @"\OpenManager\uinf.dat", encryptedPassword + "\n" + encryptedUsername);
+					File.WriteAllText(appdata + @"\OpenManager\uinf.dat", pass + "\n" + uName);
 				}
 
 				//	Show MessageBox to user.
