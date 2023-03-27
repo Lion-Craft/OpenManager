@@ -172,7 +172,10 @@ namespace OpenManager
 			//	TODO: Implement Save and Load
 
 			Debug.WriteLine(dataSet1.GetXml());
-			
+
+			//EncryptStringToBytes_Aes(dataSet1.GetXml(), );
+			File.AppendAllText(savePath, dataSet1.GetXml());	//	Write Data to file
+
 			//	Feeling like youre getting somewhere while simultaneously taking 30 steps back is very interesting indeed
 		}
 
