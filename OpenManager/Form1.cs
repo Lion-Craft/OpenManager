@@ -164,13 +164,16 @@ namespace OpenManager
 		//	Supposed to show PWD in row the button is in	
 		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
-			MessageBox.Show("pressed something" + e.RowIndex);
-			
+			//MessageBox.Show("pressed something" + e.RowIndex);
 		}
 
 		public void SaveContents(string savePath)
 		{
 			//	TODO: Implement Save and Load
+
+			Debug.WriteLine(dataSet1.GetXml());
+			
+			//	Feeling like youre getting somewhere while simultaneously taking 30 steps back is very interesting indeed
 		}
 
 		private void Form1_FormClosing(object sender, FormClosingEventArgs e)

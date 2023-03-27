@@ -30,7 +30,7 @@ namespace OpenManager
 		private void InitializeComponent()
 		{
 			this.components = new System.ComponentModel.Container();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
 			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
 			this.mainMenu1 = new System.Windows.Forms.MainMenu(this.components);
 			this.menuItem1 = new System.Windows.Forms.MenuItem();
@@ -39,15 +39,15 @@ namespace OpenManager
 			this.menuItem5 = new System.Windows.Forms.MenuItem();
 			this.menuItem4 = new System.Windows.Forms.MenuItem();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.Account = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Show = new System.Windows.Forms.DataGridViewButtonColumn();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
 			this.dataSet1 = new System.Data.DataSet();
 			this.dataTable1 = new System.Data.DataTable();
 			this.dataTable2 = new System.Data.DataTable();
 			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+			this.Account = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Show = new System.Windows.Forms.DataGridViewButtonColumn();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.toolStrip1.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -111,14 +111,14 @@ namespace OpenManager
             this.Password,
             this.Show});
 			this.dataGridView1.DataSource = this.dataSet1;
-			dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-			dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-			dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-			this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+			dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+			this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle1;
 			this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
 			this.dataGridView1.Location = new System.Drawing.Point(0, 0);
 			this.dataGridView1.MultiSelect = false;
@@ -126,30 +126,6 @@ namespace OpenManager
 			this.dataGridView1.Size = new System.Drawing.Size(800, 429);
 			this.dataGridView1.TabIndex = 2;
 			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-			// 
-			// Account
-			// 
-			this.Account.Frozen = true;
-			this.Account.HeaderText = "Account";
-			this.Account.Name = "Account";
-			this.Account.Width = 74;
-			// 
-			// Password
-			// 
-			this.Password.Frozen = true;
-			this.Password.HeaderText = "Password";
-			this.Password.Name = "Password";
-			this.Password.Width = 81;
-			// 
-			// Show
-			// 
-			this.Show.Frozen = true;
-			this.Show.HeaderText = "Show";
-			this.Show.Name = "Show";
-			this.Show.ReadOnly = true;
-			this.Show.Text = "Show";
-			this.Show.UseColumnTextForButtonValue = true;
-			this.Show.Width = 47;
 			// 
 			// toolStrip1
 			// 
@@ -193,6 +169,31 @@ namespace OpenManager
 			this.saveFileDialog1.AddExtension = false;
 			this.saveFileDialog1.RestoreDirectory = true;
 			// 
+			// Account
+			// 
+			this.Account.DataPropertyName = "account";
+			this.Account.HeaderText = "Account";
+			this.Account.Name = "Account";
+			this.Account.ToolTipText = "Enter or read a Account name or similar here";
+			this.Account.Width = 74;
+			// 
+			// Password
+			// 
+			this.Password.DataPropertyName = "password";
+			this.Password.HeaderText = "Password";
+			this.Password.Name = "Password";
+			this.Password.ToolTipText = "Enter or read a Password here";
+			this.Password.Width = 81;
+			// 
+			// Show
+			// 
+			this.Show.HeaderText = "Show";
+			this.Show.Name = "Show";
+			this.Show.ReadOnly = true;
+			this.Show.Text = "Show";
+			this.Show.UseColumnTextForButtonValue = true;
+			this.Show.Width = 47;
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -226,15 +227,15 @@ namespace OpenManager
 		private System.Windows.Forms.MenuItem menuItem4;
 		private System.Windows.Forms.MenuItem menuItem5;
 		private System.Windows.Forms.DataGridView dataGridView1;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Account;
-		private System.Windows.Forms.DataGridViewTextBoxColumn Password;
-		private System.Windows.Forms.DataGridViewButtonColumn Show;
 		private System.Windows.Forms.ToolStrip toolStrip1;
 		private System.Windows.Forms.ToolStripButton toolStripButton1;
 		private System.Data.DataSet dataSet1;
 		private System.Data.DataTable dataTable1;
 		private System.Data.DataTable dataTable2;
 		private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Account;
+		private System.Windows.Forms.DataGridViewTextBoxColumn Password;
+		private System.Windows.Forms.DataGridViewButtonColumn Show;
 	}
 }
 
