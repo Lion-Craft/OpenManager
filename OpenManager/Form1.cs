@@ -168,6 +168,11 @@ namespace OpenManager
 
         }
 
+		public void SaveContents()
+		{
+			
+		}
+
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             DialogResult result = MessageBox.Show("Do you really want to exit?", "OpenManager - Exit", MessageBoxButtons.YesNo);
