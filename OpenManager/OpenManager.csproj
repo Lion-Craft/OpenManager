@@ -109,8 +109,5 @@
     <Content Include="OpenManagerLogo.ico" />
     <None Include="Resources\Saveico.png" />
   </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Connected Services\" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

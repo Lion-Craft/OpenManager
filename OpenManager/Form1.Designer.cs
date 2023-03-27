@@ -44,8 +44,14 @@ namespace OpenManager
 			this.Show = new System.Windows.Forms.DataGridViewButtonColumn();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+			this.dataSet1 = new System.Data.DataSet();
+			this.dataTable1 = new System.Data.DataTable();
+			this.dataTable2 = new System.Data.DataTable();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			this.toolStrip1.SuspendLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataTable1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataTable2)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// mainMenu1
@@ -93,6 +99,7 @@ namespace OpenManager
 			// dataGridView1
 			// 
 			this.dataGridView1.AllowUserToOrderColumns = true;
+			this.dataGridView1.AutoGenerateColumns = false;
 			this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
 			this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
 			this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLight;
@@ -102,6 +109,7 @@ namespace OpenManager
             this.Account,
             this.Password,
             this.Show});
+			this.dataGridView1.DataSource = this.dataSet1;
 			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
 			dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -140,7 +148,7 @@ namespace OpenManager
 			this.Show.ReadOnly = true;
 			this.Show.Text = "Show";
 			this.Show.UseColumnTextForButtonValue = true;
-			this.Show.Width = 42;
+			this.Show.Width = 47;
 			// 
 			// toolStrip1
 			// 
@@ -163,6 +171,22 @@ namespace OpenManager
 			this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
 			this.toolStripButton1.Text = "Save";
 			// 
+			// dataSet1
+			// 
+			this.dataSet1.CaseSensitive = true;
+			this.dataSet1.DataSetName = "MainTable";
+			this.dataSet1.Tables.AddRange(new System.Data.DataTable[] {
+            this.dataTable1,
+            this.dataTable2});
+			// 
+			// dataTable1
+			// 
+			this.dataTable1.TableName = "account";
+			// 
+			// dataTable2
+			// 
+			this.dataTable2.TableName = "password";
+			// 
 			// Form1
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -180,6 +204,9 @@ namespace OpenManager
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip1.PerformLayout();
+			((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataTable1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.dataTable2)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -199,6 +226,9 @@ namespace OpenManager
 		private System.Windows.Forms.DataGridViewButtonColumn Show;
 		private System.Windows.Forms.ToolStrip toolStrip1;
 		private System.Windows.Forms.ToolStripButton toolStripButton1;
+		private System.Data.DataSet dataSet1;
+		private System.Data.DataTable dataTable1;
+		private System.Data.DataTable dataTable2;
 	}
 }
 
