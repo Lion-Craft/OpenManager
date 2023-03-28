@@ -144,6 +144,8 @@ namespace OpenManager
 
 			return sb.ToString();
 		}
+
+		//	Encrypt a String
 		static byte[] EncryptStringToBytes_Aes(string plainText, byte[] Key, byte[] IV)
 		{
 			// Check arguments.
@@ -184,6 +186,7 @@ namespace OpenManager
 			return encrypted;
 		}
 
+		//	Decrypt a String
 		static string DecryptStringFromBytes_Aes(byte[] cipherText, byte[] Key, byte[] IV)
 		{
 			// Check arguments.
