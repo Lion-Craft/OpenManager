@@ -20,7 +20,6 @@ namespace OpenManager
 			
 			//	Decides if you're creating a new Account or Logging into a existing one (defined in uinf.dat).
 			//	This implementation is awful because it just checks if uinf.dat exists and doesn't give a fuck if it actually contains something or not.
-			System.Diagnostics.Debug.WriteLine(appdata);
 			if (File.Exists(appdata + @"\OpenManager\uinf.dat"))
 			{
 				nuser = false;
