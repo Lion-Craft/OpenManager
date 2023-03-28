@@ -39,26 +39,29 @@ namespace OpenManager
 			this.menuItem5 = new System.Windows.Forms.MenuItem();
 			this.menuItem4 = new System.Windows.Forms.MenuItem();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.Account = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Show = new System.Windows.Forms.DataGridViewButtonColumn();
 			this.dataSet1 = new System.Data.DataSet();
 			this.dataTable1 = new System.Data.DataTable();
-			this.dataTable2 = new System.Data.DataTable();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
 			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+			this.menuItem6 = new System.Windows.Forms.MenuItem();
+			this.menuItem7 = new System.Windows.Forms.MenuItem();
+			this.dataColumn1 = new System.Data.DataColumn();
+			this.dataColumn2 = new System.Data.DataColumn();
+			this.Account = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Show = new System.Windows.Forms.DataGridViewButtonColumn();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataTable1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataTable2)).BeginInit();
 			this.toolStrip1.SuspendLayout();
 			this.SuspendLayout();
 			// 
 			// mainMenu1
 			// 
 			this.mainMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItem1});
+            this.menuItem1,
+            this.menuItem6});
 			// 
 			// menuItem1
 			// 
@@ -127,46 +130,19 @@ namespace OpenManager
 			this.dataGridView1.TabIndex = 2;
 			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
 			// 
-			// Account
-			// 
-			this.Account.DataPropertyName = "account";
-			this.Account.HeaderText = "Account";
-			this.Account.Name = "Account";
-			this.Account.ToolTipText = "Enter or read a Account name or similar here";
-			this.Account.Width = 74;
-			// 
-			// Password
-			// 
-			this.Password.DataPropertyName = "password";
-			this.Password.HeaderText = "Password";
-			this.Password.Name = "Password";
-			this.Password.ToolTipText = "Enter or read a Password here";
-			this.Password.Width = 81;
-			// 
-			// Show
-			// 
-			this.Show.HeaderText = "Show";
-			this.Show.Name = "Show";
-			this.Show.ReadOnly = true;
-			this.Show.Text = "Show";
-			this.Show.UseColumnTextForButtonValue = true;
-			this.Show.Width = 47;
-			// 
 			// dataSet1
 			// 
 			this.dataSet1.CaseSensitive = true;
 			this.dataSet1.DataSetName = "MainTable";
 			this.dataSet1.Tables.AddRange(new System.Data.DataTable[] {
-            this.dataTable1,
-            this.dataTable2});
+            this.dataTable1});
 			// 
 			// dataTable1
 			// 
-			this.dataTable1.TableName = "account";
-			// 
-			// dataTable2
-			// 
-			this.dataTable2.TableName = "password";
+			this.dataTable1.Columns.AddRange(new System.Data.DataColumn[] {
+            this.dataColumn1,
+            this.dataColumn2});
+			this.dataTable1.TableName = "Primary";
 			// 
 			// toolStrip1
 			// 
@@ -195,6 +171,55 @@ namespace OpenManager
 			this.saveFileDialog1.Filter = "OpenManager Password File|*.pwf|All Files|*.*";
 			this.saveFileDialog1.RestoreDirectory = true;
 			// 
+			// menuItem6
+			// 
+			this.menuItem6.Index = 1;
+			this.menuItem6.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
+            this.menuItem7});
+			this.menuItem6.Text = "Passwords";
+			// 
+			// menuItem7
+			// 
+			this.menuItem7.Index = 0;
+			this.menuItem7.Text = "Add";
+			this.menuItem7.Click += new System.EventHandler(this.menuItem7_Click);
+			// 
+			// dataColumn1
+			// 
+			this.dataColumn1.Caption = "Account";
+			this.dataColumn1.ColumnName = "account";
+			this.dataColumn1.DefaultValue = " ";
+			// 
+			// dataColumn2
+			// 
+			this.dataColumn2.Caption = "Password";
+			this.dataColumn2.ColumnName = "password";
+			this.dataColumn2.DefaultValue = " ";
+			// 
+			// Account
+			// 
+			this.Account.DataPropertyName = "account";
+			this.Account.HeaderText = "Account";
+			this.Account.Name = "Account";
+			this.Account.ToolTipText = "Enter or read a Account name or similar here";
+			this.Account.Width = 74;
+			// 
+			// Password
+			// 
+			this.Password.DataPropertyName = "password";
+			this.Password.HeaderText = "Password";
+			this.Password.Name = "Password";
+			this.Password.Width = 81;
+			// 
+			// Show
+			// 
+			this.Show.HeaderText = "Show";
+			this.Show.Name = "Show";
+			this.Show.ReadOnly = true;
+			this.Show.Text = "Show";
+			this.Show.UseColumnTextForButtonValue = true;
+			this.Show.Width = 47;
+			// 
 			// MainWindow
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -211,7 +236,6 @@ namespace OpenManager
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataTable1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.dataTable2)).EndInit();
 			this.toolStrip1.ResumeLayout(false);
 			this.toolStrip1.PerformLayout();
 			this.ResumeLayout(false);
@@ -232,8 +256,11 @@ namespace OpenManager
 		private System.Windows.Forms.ToolStripButton toolStripButton1;
 		private System.Data.DataSet dataSet1;
 		private System.Data.DataTable dataTable1;
-		private System.Data.DataTable dataTable2;
 		private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+		private System.Windows.Forms.MenuItem menuItem6;
+		private System.Windows.Forms.MenuItem menuItem7;
+		private System.Data.DataColumn dataColumn1;
+		private System.Data.DataColumn dataColumn2;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Account;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Password;
 		private System.Windows.Forms.DataGridViewButtonColumn Show;

@@ -35,6 +35,8 @@ namespace OpenManager
 				Debug.WriteLine("Original:   {0}", original);
 				Debug.WriteLine("Round Trip: {0}", roundtrip);
 			}
+
+			dataSet1.BeginInit();
 		}
 		public void Form_FormClosing(object sender, FormClosedEventArgs e)
 		{
@@ -181,7 +183,7 @@ namespace OpenManager
 
 		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
 		{
-			DialogResult result = MessageBox.Show("Do you really want to exit?", "OpenManager - Exit", MessageBoxButtons.YesNo);
+			DialogResult result = MessageBox.Show("Do you really want to exit?", "OpenManager - Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 			if (result == DialogResult.Yes)
 			{
 				Environment.Exit(0);
@@ -190,6 +192,13 @@ namespace OpenManager
 			{
 				e.Cancel = true;
 			}
+		}
+
+		private void menuItem7_Click(object sender, EventArgs e)
+		{
+			dataTable1.Rows.Add(dataColumn1);
+			
+			dataGridView1.Refresh();
 		}
 	}
 }

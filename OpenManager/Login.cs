@@ -98,7 +98,7 @@ namespace OpenManager
 				}
 
 				//	Show MessageBox to user.
-				MessageBox.Show("Account successfully created.");
+				MessageBox.Show("Account successfully created.", "OpenManager - Login", MessageBoxButtons.OK, MessageBoxIcon.Information);
 				//	Restart program so the user can log in.
 				Application.Restart();
 			}
