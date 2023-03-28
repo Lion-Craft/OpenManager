@@ -20,7 +20,7 @@ namespace OpenManager
 			
 			//	Decides if you're creating a new Account or Logging into a existing one (defined in uinf.dat).
 			//	This implementation is awful because it just checks if uinf.dat exists and doesn't give a fuck if it actually contains something or not.
-			if (File.Exists(appdata + @"\OpenManager\uinf.dat"))
+			if (File.Exists(appdata + @"\OpenManager\uinf1.dat") && File.Exists(appdata + @"\OpenManager\uinf2.dat"))
 			{
 				nuser = false;
 				label1.Text = "Welcome to OpenManager!\n\nPlease enter your Login Credentials.";
@@ -68,8 +68,8 @@ namespace OpenManager
 				//	Create Aes stuff, Encrypt Password and Username and Write those in a file.
 				using (Aes aes = Aes.Create())
 				{
-					string pass = null;
-					string uName = null;
+					//byte pass;
+					//byte uName;
 					//	Set Constant IV & Key for Encryption... Yes, this is stupid, especially since this is Open Source, but it's better than nothing.
 					byte[] IV = { 0x17, 0x1b, 0x16, 0x09, 0x42, 0x15, 0x69, 0x35, 0x69, 0x42, 0x20, 0x16, 0x90, 0x78, 0x24, 0x19 };
 					aes.IV = IV;
@@ -80,19 +80,21 @@ namespace OpenManager
 					byte[] encryptedPassword = EncryptStringToBytes_Aes(GetHashString(textBox3.Text), aes.Key, aes.IV);
 					byte[] encryptedUsername = EncryptStringToBytes_Aes(GetHashString(textBox1.Text), aes.Key, aes.IV);
 
+					/*
 					foreach (byte cryptPass in encryptedPassword)
 					{
-						pass += cryptPass.ToString();
+						pass += cryptPass;
 						Debug.WriteLine(pass);
 					}
 					foreach (byte cryptUser in encryptedUsername)
 					{
-						uName += cryptUser.ToString();
+						uName += cryptUser;
 						Debug.WriteLine(uName);
 					}
-
+					*/
 					//	Write Password and Username into uinf.dat.
-					File.WriteAllText(appdata + @"\OpenManager\uinf.dat", pass + "\n" + uName);
+					File.WriteAllBytes(appdata + @"\OpenManager\uinf1.dat", encryptedPassword);
+					File.WriteAllBytes(appdata + @"\OpenManager\uinf2.dat", encryptedUsername);
 				}
 
 				//	Show MessageBox to user.
@@ -114,14 +116,10 @@ namespace OpenManager
 
 				byte[] Key = { 0x3A, 0x78, 0x52, 0x7a, 0x29, 0xb3, 0x3d, 0x62, 0x64, 0x57, 0xab, 0x37, 0x00, 0x74, 0xb5, 0x5a };
 				aes.Key = Key;
-				
-				//	Debug output for converted data
-				foreach (byte bite in Encoding.ASCII.GetBytes(File.ReadAllText(appdata + @"\OpenManager\uinf.dat")))
-				{
-					Debug.Write(bite);
-				}
 
-				if (nuser == false && DecryptStringFromBytes_Aes(Encoding.ASCII.GetBytes(File.ReadAllText(appdata + @"\OpenManager\uinf.dat")), aes.Key, aes.IV) == GetHashString(textBox2.Text) + "\n" + GetHashString(textBox1.Text))
+				string decrypted = DecryptStringFromBytes_Aes(File.ReadAllBytes(appdata + @"\OpenManager\uinf1.dat"), aes.Key, aes.IV) + "\n" + DecryptStringFromBytes_Aes(File.ReadAllBytes(appdata + @"\OpenManager\uinf2.dat"), aes.Key, aes.IV);
+
+				if (nuser == false && decrypted == GetHashString(textBox2.Text) + "\n" + GetHashString(textBox1.Text))
 				{
 					var mainForm = new MainWindow();
 					mainForm.Show();
