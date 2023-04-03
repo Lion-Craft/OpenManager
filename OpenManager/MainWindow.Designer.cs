@@ -41,9 +41,6 @@ namespace OpenManager
 			this.menuItem6 = new System.Windows.Forms.MenuItem();
 			this.menuItem7 = new System.Windows.Forms.MenuItem();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
-			this.Account = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Show = new System.Windows.Forms.DataGridViewButtonColumn();
 			this.dataSet1 = new System.Data.DataSet();
 			this.dataTable1 = new System.Data.DataTable();
 			this.dataColumn1 = new System.Data.DataColumn();
@@ -52,6 +49,9 @@ namespace OpenManager
 			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
 			this.menuItem8 = new System.Windows.Forms.MenuItem();
 			this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+			this.Show = new System.Windows.Forms.DataGridViewButtonColumn();
+			this.Account = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataTable1)).BeginInit();
@@ -124,9 +124,9 @@ namespace OpenManager
 			this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
 			this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
 			this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Show,
             this.Account,
-            this.Password,
-            this.Show});
+            this.Password});
 			dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
 			dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
 			dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -142,30 +142,6 @@ namespace OpenManager
 			this.dataGridView1.Size = new System.Drawing.Size(800, 408);
 			this.dataGridView1.TabIndex = 2;
 			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-			// 
-			// Account
-			// 
-			this.Account.DataPropertyName = "account";
-			this.Account.HeaderText = "Account";
-			this.Account.Name = "Account";
-			this.Account.ToolTipText = "Enter or read a Account name or similar here";
-			this.Account.Width = 74;
-			// 
-			// Password
-			// 
-			this.Password.DataPropertyName = "password";
-			this.Password.HeaderText = "Password";
-			this.Password.Name = "Password";
-			this.Password.Width = 81;
-			// 
-			// Show
-			// 
-			this.Show.HeaderText = "Show";
-			this.Show.Name = "Show";
-			this.Show.ReadOnly = true;
-			this.Show.Text = "Show";
-			this.Show.UseColumnTextForButtonValue = true;
-			this.Show.Width = 42;
 			// 
 			// dataSet1
 			// 
@@ -226,6 +202,32 @@ namespace OpenManager
 			this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
 			this.toolStripButton1.Text = "Save";
 			// 
+			// Show
+			// 
+			this.Show.HeaderText = "Show";
+			this.Show.Name = "Show";
+			this.Show.ReadOnly = true;
+			this.Show.Text = "Show";
+			this.Show.UseColumnTextForButtonValue = true;
+			this.Show.Width = 42;
+			// 
+			// Account
+			// 
+			this.Account.DataPropertyName = "account";
+			this.Account.HeaderText = "Account";
+			this.Account.Name = "Account";
+			this.Account.ToolTipText = "Enter or read a Account name or similar here";
+			this.Account.Width = 74;
+			// 
+			// Password
+			// 
+			this.Password.DataPropertyName = "password";
+			this.Password.HeaderText = "Password";
+			this.Password.Name = "Password";
+			this.Password.ToolTipText = "Enter or Read a Password here";
+			this.Password.Visible = false;
+			this.Password.Width = 81;
+			// 
 			// MainWindow
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,10 +269,10 @@ namespace OpenManager
 		private System.Windows.Forms.MenuItem menuItem7;
 		private System.Data.DataColumn dataColumn1;
 		private System.Data.DataColumn dataColumn2;
+		private System.Windows.Forms.MenuItem menuItem8;
+		private System.Windows.Forms.DataGridViewButtonColumn Show;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Account;
 		private System.Windows.Forms.DataGridViewTextBoxColumn Password;
-		private System.Windows.Forms.DataGridViewButtonColumn Show;
-		private System.Windows.Forms.MenuItem menuItem8;
 	}
 }
 

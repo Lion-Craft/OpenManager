@@ -166,7 +166,11 @@ namespace OpenManager
 		//	Supposed to show PWD in row the button is in	
 		private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
 		{
-			//MessageBox.Show("pressed something" + e.RowIndex);
+			if (e.ColumnIndex == 0)
+			{
+				MessageBox.Show("show");
+				dataGridView1.Rows.SharedRow(e.RowIndex).Visible = true;
+			}
 		}
 
 		public void SaveContents(string savePath)
@@ -175,7 +179,8 @@ namespace OpenManager
 
 			//dataSet1
 
-			Debug.WriteLine(dataSet1.GetXml());
+			Debug.WriteLine(dataGridView1.Rows[2].Cells[1].Value);
+			
 
 			//EncryptStringToBytes_Aes(dataSet1.GetXml(), );
 			File.AppendAllText(savePath, dataSet1.GetXml());	//	Write Data to file
