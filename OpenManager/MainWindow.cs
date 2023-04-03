@@ -173,6 +173,8 @@ namespace OpenManager
 		{
 			//	TODO: Implement Save and Load
 
+			//dataSet1
+
 			Debug.WriteLine(dataSet1.GetXml());
 
 			//EncryptStringToBytes_Aes(dataSet1.GetXml(), );
@@ -199,6 +201,13 @@ namespace OpenManager
 			dataTable1.Rows.Add(dataColumn1);
 			
 			dataGridView1.Refresh();
+		}
+
+		private void menuItem8_Click(object sender, EventArgs e)
+		{
+			//	Settings button
+			var settings = new Settings();
+			settings.ShowDialog();
 		}
 	}
 }

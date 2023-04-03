@@ -95,6 +95,7 @@ namespace OpenManager
 					//	Write Password and Username into uinf.dat.
 					File.WriteAllBytes(appdata + @"\OpenManager\uinf1.dat", encryptedPassword);
 					File.WriteAllBytes(appdata + @"\OpenManager\uinf2.dat", encryptedUsername);
+					File.WriteAllText(appdata + @"\OpenManager\uset.dat", "0");
 				}
 
 				//	Show MessageBox to user.
