@@ -135,10 +135,8 @@ namespace OpenManager
 					}
 				}
 			}
-
 			return plaintext;
 		}
-
 		private void menuItem3_Click(object sender, EventArgs e)
 		{
 			//	"Save" button in Menu Bar under "File".
@@ -150,13 +148,11 @@ namespace OpenManager
 			//	Call SaveContents to save contents of DataGridViewer (oh who wouldve thought)
 			SaveContents(saveFileDialog1.FileName);
 		}
-
 		private void menuItem4_Click(object sender, EventArgs e)
 		{
 			//	"Quit" button in Menu Bar under "File".
 			Application.Exit();
 		}
-
 		private void menuItem5_Click(object sender, EventArgs e)
 		{
 			//	"About" button in Menu Bar under "File".
@@ -172,7 +168,6 @@ namespace OpenManager
 				dataGridView1.Rows.SharedRow(e.RowIndex).Visible = true;
 			}
 		}
-
 		public void SaveContents(string savePath)
 		{
 			//	TODO: Implement Save and Load
@@ -187,7 +182,6 @@ namespace OpenManager
 
 			//	Feeling like youre getting somewhere while simultaneously taking 30 steps back is very interesting indeed
 		}
-
 		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
 		{
 			DialogResult result = MessageBox.Show("Do you really want to exit?", "OpenManager - Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
@@ -200,14 +194,6 @@ namespace OpenManager
 				e.Cancel = true;
 			}
 		}
-
-		private void menuItem7_Click(object sender, EventArgs e)
-		{
-			dataTable1.Rows.Add(dataColumn1);
-			
-			dataGridView1.Refresh();
-		}
-
 		private void menuItem8_Click(object sender, EventArgs e)
 		{
 			//	Settings button

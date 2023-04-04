@@ -36,22 +36,20 @@ namespace OpenManager
 			this.menuItem1 = new System.Windows.Forms.MenuItem();
 			this.menuItem2 = new System.Windows.Forms.MenuItem();
 			this.menuItem3 = new System.Windows.Forms.MenuItem();
+			this.menuItem8 = new System.Windows.Forms.MenuItem();
 			this.menuItem5 = new System.Windows.Forms.MenuItem();
 			this.menuItem4 = new System.Windows.Forms.MenuItem();
-			this.menuItem6 = new System.Windows.Forms.MenuItem();
-			this.menuItem7 = new System.Windows.Forms.MenuItem();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.Show = new System.Windows.Forms.DataGridViewButtonColumn();
+			this.Account = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataSet1 = new System.Data.DataSet();
 			this.dataTable1 = new System.Data.DataTable();
 			this.dataColumn1 = new System.Data.DataColumn();
 			this.dataColumn2 = new System.Data.DataColumn();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
-			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-			this.menuItem8 = new System.Windows.Forms.MenuItem();
 			this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-			this.Show = new System.Windows.Forms.DataGridViewButtonColumn();
-			this.Account = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataTable1)).BeginInit();
@@ -61,8 +59,7 @@ namespace OpenManager
 			// mainMenu1
 			// 
 			this.mainMenu1.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItem1,
-            this.menuItem6});
+            this.menuItem1});
 			// 
 			// menuItem1
 			// 
@@ -88,6 +85,12 @@ namespace OpenManager
 			this.menuItem3.Text = "Save";
 			this.menuItem3.Click += new System.EventHandler(this.menuItem3_Click);
 			// 
+			// menuItem8
+			// 
+			this.menuItem8.Index = 2;
+			this.menuItem8.Text = "Settings";
+			this.menuItem8.Click += new System.EventHandler(this.menuItem8_Click);
+			// 
 			// menuItem5
 			// 
 			this.menuItem5.Index = 3;
@@ -101,19 +104,6 @@ namespace OpenManager
 			this.menuItem4.Shortcut = System.Windows.Forms.Shortcut.AltF4;
 			this.menuItem4.Text = "Quit";
 			this.menuItem4.Click += new System.EventHandler(this.menuItem4_Click);
-			// 
-			// menuItem6
-			// 
-			this.menuItem6.Index = 1;
-			this.menuItem6.MenuItems.AddRange(new System.Windows.Forms.MenuItem[] {
-            this.menuItem7});
-			this.menuItem6.Text = "Passwords";
-			// 
-			// menuItem7
-			// 
-			this.menuItem7.Index = 0;
-			this.menuItem7.Text = "Add";
-			this.menuItem7.Click += new System.EventHandler(this.menuItem7_Click);
 			// 
 			// dataGridView1
 			// 
@@ -142,6 +132,32 @@ namespace OpenManager
 			this.dataGridView1.Size = new System.Drawing.Size(800, 408);
 			this.dataGridView1.TabIndex = 2;
 			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+			// 
+			// Show
+			// 
+			this.Show.HeaderText = "Show";
+			this.Show.Name = "Show";
+			this.Show.ReadOnly = true;
+			this.Show.Text = "Show";
+			this.Show.UseColumnTextForButtonValue = true;
+			this.Show.Width = 42;
+			// 
+			// Account
+			// 
+			this.Account.DataPropertyName = "account";
+			this.Account.HeaderText = "Account";
+			this.Account.Name = "Account";
+			this.Account.ToolTipText = "Enter or read a Account name or similar here";
+			this.Account.Width = 74;
+			// 
+			// Password
+			// 
+			this.Password.DataPropertyName = "password";
+			this.Password.HeaderText = "Password";
+			this.Password.Name = "Password";
+			this.Password.ToolTipText = "Enter or Read a Password here";
+			this.Password.Visible = false;
+			this.Password.Width = 81;
 			// 
 			// dataSet1
 			// 
@@ -181,18 +197,6 @@ namespace OpenManager
 			this.toolStrip1.Text = "toolStrip1";
 			this.toolStrip1.Visible = false;
 			// 
-			// saveFileDialog1
-			// 
-			this.saveFileDialog1.DefaultExt = "pwf";
-			this.saveFileDialog1.Filter = "OpenManager Password File|*.pwf|All Files|*.*";
-			this.saveFileDialog1.RestoreDirectory = true;
-			// 
-			// menuItem8
-			// 
-			this.menuItem8.Index = 2;
-			this.menuItem8.Text = "Settings";
-			this.menuItem8.Click += new System.EventHandler(this.menuItem8_Click);
-			// 
 			// toolStripButton1
 			// 
 			this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -202,31 +206,11 @@ namespace OpenManager
 			this.toolStripButton1.Size = new System.Drawing.Size(23, 22);
 			this.toolStripButton1.Text = "Save";
 			// 
-			// Show
+			// saveFileDialog1
 			// 
-			this.Show.HeaderText = "Show";
-			this.Show.Name = "Show";
-			this.Show.ReadOnly = true;
-			this.Show.Text = "Show";
-			this.Show.UseColumnTextForButtonValue = true;
-			this.Show.Width = 42;
-			// 
-			// Account
-			// 
-			this.Account.DataPropertyName = "account";
-			this.Account.HeaderText = "Account";
-			this.Account.Name = "Account";
-			this.Account.ToolTipText = "Enter or read a Account name or similar here";
-			this.Account.Width = 74;
-			// 
-			// Password
-			// 
-			this.Password.DataPropertyName = "password";
-			this.Password.HeaderText = "Password";
-			this.Password.Name = "Password";
-			this.Password.ToolTipText = "Enter or Read a Password here";
-			this.Password.Visible = false;
-			this.Password.Width = 81;
+			this.saveFileDialog1.DefaultExt = "pwf";
+			this.saveFileDialog1.Filter = "OpenManager Password File|*.pwf|All Files|*.*";
+			this.saveFileDialog1.RestoreDirectory = true;
 			// 
 			// MainWindow
 			// 
@@ -265,8 +249,6 @@ namespace OpenManager
 		private System.Data.DataSet dataSet1;
 		private System.Data.DataTable dataTable1;
 		private System.Windows.Forms.SaveFileDialog saveFileDialog1;
-		private System.Windows.Forms.MenuItem menuItem6;
-		private System.Windows.Forms.MenuItem menuItem7;
 		private System.Data.DataColumn dataColumn1;
 		private System.Data.DataColumn dataColumn2;
 		private System.Windows.Forms.MenuItem menuItem8;
