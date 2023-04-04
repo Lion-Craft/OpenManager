@@ -18,7 +18,9 @@ namespace OpenManager
 		public Settings()
 		{
 			InitializeComponent();
+
 			//	Load Theme info
+			theme = File.ReadAllText(appdata + @"\OpenManager\uset.dat");   //	Color loading is fixed now thanks to this
 			Debug.WriteLine(theme);
 			if (theme == "0")
 			{
@@ -32,19 +34,18 @@ namespace OpenManager
 			{
 				//	Set Light theme.
 				radioButton2.Checked = true;
-				this.BackColor = Color.FromName("Window");
-				button1.BackColor = Color.FromName("Window");
-				this.ForeColor = Color.FromName("ControlText");
+				this.BackColor = Color.White;
+				button1.BackColor = Color.White;
+				this.ForeColor = Color.Black;
 				Debug.WriteLine("theme 1");
 			} else if (theme == "2")
 			{
 				//	Set Dark theme.
 				radioButton3.Checked = true;
-				this.BackColor = Color.FromName("ControlDarkDark");
-				button1.BackColor = Color.FromName("ControlDarkDark");
-				this.ForeColor = Color.FromName("HighlightText");
+				this.BackColor = Color.DimGray;
+				button1.BackColor = Color.DimGray;
+				this.ForeColor = Color.White;
 				Debug.WriteLine("theme 2");
-				//	Why the fuck does it not set the correct color? WHYYYYYYYY
 			}
 		}
 
@@ -60,18 +61,18 @@ namespace OpenManager
 		private void radioButton2_CheckedChanged(object sender, EventArgs e)
 		{
 			//	Light mode button
-			this.BackColor = Color.FromName("Window");
-			button1.BackColor = Color.FromName("Window");
-			this.ForeColor = Color.FromName("ControlText");
+			this.BackColor = Color.White;
+			button1.BackColor = Color.White;
+			this.ForeColor = Color.Black;
 			theme = "1";
 		}
 
 		private void radioButton3_CheckedChanged(object sender, EventArgs e)
 		{
 			//	Dark mode button
-			this.BackColor = Color.FromName("ControlDarkDark");
-			button1.BackColor = Color.FromName("ControlDarkDark");
-			this.ForeColor = Color.FromName("HighlightText");
+			this.BackColor = Color.DimGray;
+			button1.BackColor = Color.DimGray;
+			this.ForeColor = Color.White;
 			theme = "2";
 		}
 

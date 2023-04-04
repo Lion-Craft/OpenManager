@@ -14,9 +14,44 @@ namespace OpenManager
 {
 	public partial class MainWindow : Form
 	{
+		public static string appdata = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+		public string theme = File.ReadAllText(appdata + @"\OpenManager\uset.dat");
 		public MainWindow()
 		{
 			InitializeComponent();
+			//	Load Theme info
+			Debug.WriteLine(theme);
+			if (theme == "0")
+			{
+				//	Set Classic Theme.
+				this.BackColor = Color.FromName("Control");
+				dataGridView1.BackgroundColor = Color.FromName("Control");
+				dataGridView1.GridColor = Color.Black;
+				dataGridView1.DefaultCellStyle.BackColor = Color.FromName("Control");
+				this.ForeColor = Color.FromName("ControlText");
+				Debug.WriteLine("theme 0");
+			}
+			else if (theme == "1")
+			{
+				//	Set Light theme.
+				this.BackColor = Color.White;
+				dataGridView1.BackgroundColor = Color.White;
+				dataGridView1.GridColor = Color.Black;
+				dataGridView1.DefaultCellStyle.BackColor = Color.White;
+				this.ForeColor = Color.Black;
+				Debug.WriteLine("theme 1");
+			}
+			else if (theme == "2")
+			{
+				//	Set Dark theme.
+				this.BackColor = Color.DimGray;
+				dataGridView1.BackgroundColor = Color.DimGray;
+				dataGridView1.GridColor = Color.LightGray;
+				dataGridView1.DefaultCellStyle.BackColor = Color.DimGray;
+				this.ForeColor = Color.White;
+				Debug.WriteLine("theme 2");
+			}
+
 			string original = "Here is some data to encrypt!";
 
 			// Create a new instance of the Aes
@@ -199,6 +234,39 @@ namespace OpenManager
 			//	Settings button
 			var settings = new Settings();
 			settings.ShowDialog();
+			//	Load Updated Theme info
+			theme = File.ReadAllText(appdata + @"\OpenManager\uset.dat");
+			Debug.WriteLine(theme);
+			if (theme == "0")
+			{
+				//	Set Classic Theme.
+				this.BackColor = Color.FromName("Control");
+				dataGridView1.BackgroundColor = Color.FromName("Control"); 
+				dataGridView1.GridColor = Color.Black;
+				dataGridView1.DefaultCellStyle.BackColor = Color.FromName("Control");
+				this.ForeColor = Color.FromName("ControlText");
+				Debug.WriteLine("theme 0");
+			}
+			else if (theme == "1")
+			{
+				//	Set Light theme.
+				this.BackColor = Color.White;
+				dataGridView1.BackgroundColor = Color.White;
+				dataGridView1.GridColor = Color.Black;
+				dataGridView1.DefaultCellStyle.BackColor = Color.White;
+				this.ForeColor = Color.Black;
+				Debug.WriteLine("theme 1");
+			}
+			else if (theme == "2")
+			{
+				//	Set Dark theme.
+				this.BackColor = Color.DimGray;
+				dataGridView1.BackgroundColor = Color.DimGray;
+				dataGridView1.GridColor = Color.LightGray;
+				dataGridView1.DefaultCellStyle.BackColor = Color.DimGray;
+				this.ForeColor = Color.White;
+				Debug.WriteLine("theme 2");
+			}
 		}
 	}
 }
