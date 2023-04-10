@@ -209,7 +209,6 @@ namespace OpenManager
 			this.Password.HeaderText = "Password";
 			this.Password.Name = "Password";
 			this.Password.ToolTipText = "Enter or Read a Password here";
-			this.Password.Visible = false;
 			this.Password.Width = 81;
 			// 
 			// MainWindow

@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Security.Cryptography;
 using System.IO;
@@ -206,14 +202,23 @@ namespace OpenManager
 		public void SaveContents(string savePath)
 		{
 			//	TODO: Implement Save and Load
+			int rowCount, counter;
+			rowCount = dataGridView1.Rows.GetRowCount(DataGridViewElementStates.None) - 1;
 
-			//dataSet1
-
-			Debug.WriteLine(dataGridView1.Rows[2].Cells[1].Value);
+			for (counter = 1; counter < (rowCount * 2); counter++)
+			{
+				Debug.WriteLine(counter + "\n" + rowCount);
+				if (counter > rowCount)
+				{
+					File.AppendAllText(savePath, dataGridView1.Rows[counter - counter].Cells[2].Value.ToString());
+				}
+				else
+				{
+					File.AppendAllText(savePath, dataGridView1.Rows[counter].Cells[1].Value.ToString());
+				}
+			}
 			
-
-			//EncryptStringToBytes_Aes(dataSet1.GetXml(), );
-			File.AppendAllText(savePath, dataSet1.GetXml());	//	Write Data to file
+			Debug.WriteLine(dataGridView1.Rows[2].Cells[1].Value + "\n" + rowCount);
 
 			//	Feeling like youre getting somewhere while simultaneously taking 30 steps back is very interesting indeed
 		}
