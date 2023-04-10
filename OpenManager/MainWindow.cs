@@ -22,8 +22,8 @@ namespace OpenManager
 				//	Set Classic Theme.
 				this.BackColor = Color.FromName("Control");
 				dataGridView1.BackgroundColor = Color.FromName("Control");
-				dataGridView1.GridColor = Color.Black;
-				dataGridView1.DefaultCellStyle.BackColor = Color.FromName("Control");
+				dataGridView1.GridColor = Color.FromName("ControlDark");
+				dataGridView1.DefaultCellStyle.BackColor = Color.FromName("ControlLightLight");
 				this.ForeColor = Color.FromName("ControlText");
 				Debug.WriteLine("theme 0");
 			}
@@ -247,8 +247,8 @@ namespace OpenManager
 				//	Set Classic Theme.
 				this.BackColor = Color.FromName("Control");
 				dataGridView1.BackgroundColor = Color.FromName("Control"); 
-				dataGridView1.GridColor = Color.Black;
-				dataGridView1.DefaultCellStyle.BackColor = Color.FromName("Control");
+				dataGridView1.GridColor = Color.FromName("ControlDark");
+				dataGridView1.DefaultCellStyle.BackColor = Color.FromName("ControlLightLight");
 				this.ForeColor = Color.FromName("ControlText");
 				Debug.WriteLine("theme 0");
 			}

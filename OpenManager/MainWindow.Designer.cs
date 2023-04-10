@@ -40,6 +40,9 @@ namespace OpenManager
 			this.menuItem5 = new System.Windows.Forms.MenuItem();
 			this.menuItem4 = new System.Windows.Forms.MenuItem();
 			this.dataGridView1 = new System.Windows.Forms.DataGridView();
+			this.Show = new System.Windows.Forms.DataGridViewButtonColumn();
+			this.Account = new System.Windows.Forms.DataGridViewTextBoxColumn();
+			this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			this.dataSet1 = new System.Data.DataSet();
 			this.dataTable1 = new System.Data.DataTable();
 			this.dataColumn1 = new System.Data.DataColumn();
@@ -47,9 +50,6 @@ namespace OpenManager
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
 			this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
-			this.Show = new System.Windows.Forms.DataGridViewButtonColumn();
-			this.Account = new System.Windows.Forms.DataGridViewTextBoxColumn();
-			this.Password = new System.Windows.Forms.DataGridViewTextBoxColumn();
 			((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.dataTable1)).BeginInit();
@@ -133,6 +133,31 @@ namespace OpenManager
 			this.dataGridView1.TabIndex = 2;
 			this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
 			// 
+			// Show
+			// 
+			this.Show.HeaderText = "Show";
+			this.Show.Name = "Show";
+			this.Show.ReadOnly = true;
+			this.Show.Text = "Show";
+			this.Show.UseColumnTextForButtonValue = true;
+			this.Show.Width = 42;
+			// 
+			// Account
+			// 
+			this.Account.DataPropertyName = "account";
+			this.Account.HeaderText = "Account";
+			this.Account.Name = "Account";
+			this.Account.ToolTipText = "Enter or read a Account name or similar here";
+			this.Account.Width = 74;
+			// 
+			// Password
+			// 
+			this.Password.DataPropertyName = "password";
+			this.Password.HeaderText = "Password";
+			this.Password.Name = "Password";
+			this.Password.ToolTipText = "Enter or Read a Password here";
+			this.Password.Width = 81;
+			// 
 			// dataSet1
 			// 
 			this.dataSet1.CaseSensitive = true;
@@ -185,31 +210,6 @@ namespace OpenManager
 			this.saveFileDialog1.DefaultExt = "pwf";
 			this.saveFileDialog1.Filter = "OpenManager Password File|*.pwf|All Files|*.*";
 			this.saveFileDialog1.RestoreDirectory = true;
-			// 
-			// Show
-			// 
-			this.Show.HeaderText = "Show";
-			this.Show.Name = "Show";
-			this.Show.ReadOnly = true;
-			this.Show.Text = "Show";
-			this.Show.UseColumnTextForButtonValue = true;
-			this.Show.Width = 42;
-			// 
-			// Account
-			// 
-			this.Account.DataPropertyName = "account";
-			this.Account.HeaderText = "Account";
-			this.Account.Name = "Account";
-			this.Account.ToolTipText = "Enter or read a Account name or similar here";
-			this.Account.Width = 74;
-			// 
-			// Password
-			// 
-			this.Password.DataPropertyName = "password";
-			this.Password.HeaderText = "Password";
-			this.Password.Name = "Password";
-			this.Password.ToolTipText = "Enter or Read a Password here";
-			this.Password.Width = 81;
 			// 
 			// MainWindow
 			// 
