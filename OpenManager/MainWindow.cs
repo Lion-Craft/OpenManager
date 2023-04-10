@@ -202,20 +202,21 @@ namespace OpenManager
 		public void SaveContents(string savePath)
 		{
 			//	TODO: Implement Save and Load
-			int rowCount, counter;
+
+			//	Create variables used to count rows & columns
+			int rowCount, counter, columnCount = 1;
 			rowCount = dataGridView1.Rows.GetRowCount(DataGridViewElementStates.None) - 1;
 
-			for (counter = 1; counter < (rowCount * 2); counter++)
+			for (counter = 1; columnCount < 2; counter++)
 			{
-				Debug.WriteLine(counter + "\n" + rowCount);
-				if (counter > rowCount)
+				Debug.WriteLine(counter + "\n" + rowCount + "\n" + columnCount + "\n");
+				if (counter > rowCount && columnCount < 2)
 				{
-					File.AppendAllText(savePath, dataGridView1.Rows[counter - counter].Cells[2].Value.ToString());
+					counter = 1;
+					columnCount++;
 				}
-				else
-				{
-					File.AppendAllText(savePath, dataGridView1.Rows[counter].Cells[1].Value.ToString());
-				}
+				Debug.WriteLine(dataGridView1.Rows[counter].Cells[columnCount].Value.ToString());
+				File.AppendAllText(savePath, dataGridView1.Rows[counter].Cells[columnCount].Value.ToString());
 			}
 			
 			Debug.WriteLine(dataGridView1.Rows[2].Cells[1].Value + "\n" + rowCount);
@@ -224,13 +225,16 @@ namespace OpenManager
 		}
 		private void Form1_FormClosing(object sender, FormClosingEventArgs e)
 		{
+			//	Opens a MessageBox asking the User if they really want to exit OpenManager
 			DialogResult result = MessageBox.Show("Do you really want to exit?", "OpenManager - Exit", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 			if (result == DialogResult.Yes)
 			{
+				//	Closes program if user clicks "Yes"-Button
 				Environment.Exit(0);
 			}
 			else
 			{
+				//	Returns back to MainWindow without closing program
 				e.Cancel = true;
 			}
 		}
